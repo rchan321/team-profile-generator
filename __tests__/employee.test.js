@@ -4,13 +4,25 @@ test('creates an employee object', () => {
     const employee = new Enemy('Roger', 25, 'roger7c@yahoo.com');
   
     expect(employee.name).toBe(expect.any(String));
-    expect(employee.email).toBe(expect.any(String));
+    
     expect(employee.id).toBe(expect.any(Number));
-
+    expect(employee.email).toBe(expect.any(String));
   });
 
-  test("gets enemy's health value", () => {
-    const enemy = new Enemy('goblin', 'sword');
+  test("gets employee's name", () => {
+    const employee = new Enemy('Roger', 25, 'roger7c@yahoo.com');
   
-    expect(enemy.getHealth()).toEqual(expect.stringContaining(enemy.health.toString()));
+    expect(employee.getName()).toEqual(expect.any(String));
   });
+
+  test("gets employee's ID", () => {
+    const employee = new Enemy('Roger', 25, 'roger7c@yahoo.com');
+  expect(employee.getId()).toEqual(expect.any(Number));
+  });
+
+  test("gets employee's email", () => {
+    const employee = new Enemy('Roger', 25, 'roger7c@yahoo.com');
+  
+    expect(employee.getEmail()).toEqual(expect.any(String));
+  });
+
