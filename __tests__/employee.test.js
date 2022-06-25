@@ -3,10 +3,14 @@ const Employee = require('../lib/Enemy.js');
 test('creates an employee object', () => {
     const employee = new Enemy('Roger', 25, 'roger7c@yahoo.com');
   
-    expect(employee.name).toBe('goblin');
-    expect(enemy.weapon).toBe('sword');
-    expect(enemy.health).toEqual(expect.any(Number));
-    expect(enemy.strength).toEqual(expect.any(Number));
-    expect(enemy.agility).toEqual(expect.any(Number));
-    expect(enemy.potion).toEqual(expect.any(Object));
+    expect(employee.name).toBe(expect.any(String));
+    expect(employee.email).toBe(expect.any(String));
+    expect(employee.id).toBe(expect.any(Number));
+
+  });
+
+  test("gets enemy's health value", () => {
+    const enemy = new Enemy('goblin', 'sword');
+  
+    expect(enemy.getHealth()).toEqual(expect.stringContaining(enemy.health.toString()));
   });
